@@ -1,2 +1,0 @@
-opcionais - bootstrap
-botao de remover aluno
