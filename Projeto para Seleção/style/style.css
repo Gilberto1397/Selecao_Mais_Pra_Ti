@@ -1,0 +1,37 @@
+body{
+    background: url("../img/neutral-curvy-lines-modern-zen-garden-wallpaper-mural-Plain-scaled.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+i{
+    font-size: 90px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+i:hover{
+    font-size: 120px;
+}
+
+p{
+    width: 60vw;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px
+}
+
+.flex > div >  p{
+    width: 40vw;
+    margin-right: 200px;
+}
+
+.red{
+    color: red;
+}

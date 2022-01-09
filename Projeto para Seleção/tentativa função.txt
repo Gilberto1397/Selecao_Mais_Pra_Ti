@@ -1,0 +1,49 @@
+function selectDelete() {
+    const icon = document.getElementsByTagName("i");
+    const div3 = document.getElementsByClassName("flex");
+
+    for (let index = 0; index < icon.length; index++) {
+        const element = icon[index];
+        div3.addEventListener('click', function (event) {
+            if (element.classList.contains('red')) {
+            }
+        
+        event.target.classList.toggle('red'); //toglle verifica se tem ou não a classe. Se tiver ela é removida, se não tiver é adicionada ao disparar o evento.
+               
+        });
+        
+    }
+    
+}
+
+function deleteStudent() {
+    const remover = document.querySelector(".icon");
+    remover.addEventListener('click', function (e) {
+        e.preventDefault()
+        const tarefa = document.querySelectorAll('i');
+        const div3 = document.getElementsByClassName("flex");
+        //const information = document.querySelector('#information')
+
+        for (let index = 0; index < div3.length; index += 1) {
+
+            if (div3[index].classList.contains('flex')) {
+                div3[index].parentNode.removeChild(div3[index])
+                
+            }
+        }
+
+    });
+}
+
+
+
+ const del = document.getElementById("delete")
+    del.addEventListener("click", function(event){
+        for (let index = 0; index < icon.length; index++) {
+            icon[index].classList.remove("red")
+            
+        }
+        event.target.classList.add("red");
+    })
+    
+window.onload = funcion() {}
