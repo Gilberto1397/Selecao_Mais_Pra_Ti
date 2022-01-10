@@ -106,7 +106,7 @@ function validation() {
 function selectDelete() {
     //função criada para selecionar os ícones dos elementos a serem excluídos 
     const information = document.getElementById("information");
-    information.addEventListener('dblclick', function(event) {
+    information.addEventListener('click', function(event) {
         event.target.classList.toggle("red"); //toglle verifica se tem ou não a classe. Se tiver ela é removida, se não tiver é adicionada ao disparar o evento.
 
     });
