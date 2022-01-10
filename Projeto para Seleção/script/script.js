@@ -43,17 +43,6 @@ function studentData() {
 
 }
 
-function save() {
-    // função criada para executar a função studentData() - NÃO SENDO USADA
-    const register = document.getElementById("register");
-    register.addEventListener("click", function(e) {
-        e.preventDefault()
-        studentData()
-        selectDelete()
-        deleteStudent()
-    });
-}
-
 function validation() {
     // função criada para validar a presença de dados no formulário e após confirmar irá salvar os dados com a função studentData()
     const register = document.getElementById("register");
