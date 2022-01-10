@@ -1,8 +1,13 @@
 body{
+    font-family: 'Roboto Mono', monospace;
     background: url("../img/neutral-curvy-lines-modern-zen-garden-wallpaper-mural-Plain-scaled.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+form{
+    font-size: 20px;
 }
 
 i{

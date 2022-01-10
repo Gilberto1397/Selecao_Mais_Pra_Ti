@@ -49,7 +49,8 @@ function save() {
     register.addEventListener("click", function(e) {
         e.preventDefault()
         studentData()
-
+        selectDelete()
+        deleteStudent()
     });
 }
 
@@ -103,45 +104,33 @@ function validation() {
 }
 
 function selectDelete() {
-    //função criada para selecionar os ícones dos elementos a serem excluídos - EM DESENVOLVIMENTO
-    const register = document.getElementById("register");
-    register.addEventListener("click", function() {
+    //função criada para selecionar os ícones dos elementos a serem excluídos 
+    const information = document.getElementById("information");
+    information.addEventListener('dblclick', function(event) {
+        event.target.classList.toggle("red"); //toglle verifica se tem ou não a classe. Se tiver ela é removida, se não tiver é adicionada ao disparar o evento.
 
-        const icon = document.getElementsByTagName("i");
-        for (let index = 0; index < icon.length; index++) {
-            const element = icon[index];
-            element.addEventListener('click', function(event) {
-                if (element.classList.contains('red')) {
+    });
 
-                }
-
-                event.target.classList.toggle('red'); //toglle verifica se tem ou não a classe. Se tiver ela é removida, se não tiver é adicionada ao disparar o evento.
-
-            });
-
-        }
-
-
-    })
 }
 
 function deleteStudent() {
-    // função criada para apagar os dados do aluno de acordo com o ícone seleciondo - EM DESENVOLVIMENTO
-    const remover = document.getElementById("delete");
-    remover.addEventListener('click', function(e) {
+    // função criada para apagar os dados do aluno de acordo com o ícone seleciondo 
+    const del = document.getElementById("delete");
+    del.addEventListener('click', function(e) {
         e.preventDefault()
         const tarefa = document.querySelectorAll('i');
-        const div3 = document.getElementsByClassName("flex");
-        //const information = document.querySelector('#information')
-
+        const div3 = document.querySelectorAll('.flex');
+        const information = document.getElementById("information");
         for (let index = 0; index < tarefa.length; index += 1) {
-            if (tarefa[index].classList.contains('red')) {
-                div3[index].parentNode.removeChild(div3[index])
-
+            if (tarefa[index].classList.contains("red")) {
+                information.removeChild(div3[index])
             }
         }
-
     });
 }
 
 validation()
+
+selectDelete()
+
+deleteStudent()
